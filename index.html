@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Feminismo Actual - Aleix García Vivo</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+<style>
+/* Reset y fuente */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Roboto',sans-serif; display:flex; background:#f4f7f9; color:#333; }
+
+/* Menú lateral */
+nav {
+    width:250px; background:#ff6f91; color:white; min-height:100vh;
+    position:fixed; top:0; left:0; padding-top:30px; transition:0.3s;
+}
+nav h2 { text-align:center; margin-bottom:30px; font-size:1.6em; }
+nav a { display:flex; align-items:center; color:white; text-decoration:none;
+        padding:12px 20px; margin:6px 10px; border-radius:8px; transition:0.3s; }
+nav a:hover { background:#ff4b75; transform:scale(1.03); }
+nav a i { margin-right:10px; font-size:1.2em; }
+
+/* Contenido principal */
+main { margin-left:250px; padding:20px 40px; max-width:1000px; flex:1; }
+
+/* Header */
+header { text-align:center; padding:40px 0; }
+header h1 { color:#ff3d6f; font-size:2.6em; margin-bottom:10px; }
+header p { font-size:1.2em; color:#555; }
+
+/* Secciones */
+section {
+    background:white; padding:25px 30px; border-radius:12px; margin-bottom:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08); opacity:0; transform:translateY(30px);
+    transition: all 0.7s ease;
+}
+section.visible { opacity:1; transform:translateY(0); }
+h2 { color:#ff3d6f; margin-bottom:15px; }
+ul { margin-left:20px; margin-top:10px; }
+
+/* Gráficos de barras animados con tooltip */
+.grafico { display:flex; align-items:flex-end; gap:20px; margin-top:20px; justify-content:center; }
+.barra {
+    width:80px; background:#ff6f91; border-radius:10px 10px 0 0;
+    text-align:center; color:white; font-weight:bold; display:flex; justify-content:center; align-items:flex-end;
+    position:relative; cursor:pointer; transition: transform 0.3s;
+}
+.barra:hover { transform:scale(1.05); }
+.barra span { padding-bottom:5px; }
+.barra .tooltip {
+    position:absolute; top:-30px; left:50%; transform:translateX(-50%);
+    background:#ff3d6f; color:white; padding:5px 8px; border-radius:5px;
+    font-size:0.85em; opacity:0; transition: opacity 0.3s;
+}
+.barra:hover .tooltip { opacity:1; }
+
+/* Error cards interactivos */
+.error-card { display:flex; align-items:center; background:#ffe6ee; padding:15px; border-radius:10px;
+    margin:10px 0; transition: transform 0.3s, box-shadow 0.3s; cursor:pointer; }
+.error-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+.error-card i { font-size:1.8em; margin-right:15px; color:#ff3d6f; }
+
+/* Formulario de opinión */
+form { margin-top:15px; }
+form label { font-weight:bold; display:block; margin-top:10px; }
+form select, form textarea { width:100%; padding:8px; margin-top:5px; border-radius:5px; border:1px solid #ccc; }
+form button { margin-top:15px; padding:10px 20px; background:#ff3d6f; color:white; border:none; border-radius:8px; cursor:pointer; transition:0.3s; }
+form button:hover { background:#ff1d4f; }
+
+/* Footer */
+footer { text-align:center; padding:20px; background:#ff6f91; color:white; border-radius:0 0 12px 12px; margin-top:20px; }
+
+/* Responsive */
+@media(max-width:768px){
+    nav { width:100%; position:relative; display:flex; overflow-x:auto; }
+    nav a { flex:1; justify-content:center; margin:5px; }
+    main { margin-left:0; padding:20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <h2>Menú</h2>
+    <a href="#introduccion"><i class="ri-book-2-fill"></i>Introducción</a>
+    <a href="#leyes"><i class="ri-file-list-3-fill"></i>Leyes</a>
+    <a href="#igualdad"><i class="ri-equalizer-fill"></i>Igualdad</a>
+    <a href="#presupuesto"><i class="ri-bar-chart-fill"></i>Presupuesto</a>
+    <a href="#reflexiones"><i class="ri-lightbulb-fill"></i>Reflexiones</a>
+    <a href="#errores"><i class="ri-error-warning-fill"></i>Errores</a>
+    <a href="#conclusiones"><i class="ri-check-fill"></i>Conclusiones</a>
+    <a href="#encuesta"><i class="ri-chat-3-fill"></i>Tu opinión</a>
+</nav>
+
+<main>
+<header>
+    <h1>El feminismo actual, ¿está… mal?</h1>
+    <p>Análisis sobre Igualdad Legal, Políticas Feministas y Prioridades de Inversión en España y Cataluña</p>
+</header>
+
+<section id="introduccion">
+    <h2>1. Introducción</h2>
+    <ul>
+        <li>Situación legal de hombres y mujeres en España y Cataluña.</li>
+        <li>Ventajas legales para mujeres y concepto de "superioridad práctica parcial".</li>
+        <li>Asignación presupuestaria pública hacia políticas feministas vs investigación contra el cáncer de mama.</li>
+        <li>Reflexiones sobre la necesidad y vigencia del feminismo y propuesta de redistribución de recursos.</li>
+    </ul>
+</section>
+
+<section id="leyes">
+    <h2>2. Leyes y Superioridad Legal</h2>
+    <ul>
+        <li>Ley de Protección Integral contra la Violencia de Género (2004)</li>
+        <li>Tipo de gravamen reducido en vivienda para víctimas de violencia machista</li>
+        <li>Acceso preferente a vivienda social para mujeres víctimas</li>
+        <li>Exención de plusvalía municipal para hijos de mujeres fallecidas</li>
+        <li>Ley de Paridad / Representación equilibrada (LO 2/2024)</li>
+    </ul>
+</section>
+
+<section id="igualdad">
+    <h2>3. Igualdad formal vs igualdad real</h2>
+    <p>La igualdad formal: derechos legales iguales. La igualdad real: oportunidades y condiciones iguales en la práctica. El feminismo aborda ambas dimensiones.</p>
+</section>
+
+<section id="presupuesto">
+    <h2>4. Presupuesto público: feminismo vs cáncer de mama</h2>
+    <p>Comparación de inversión pública:</p>
+    <div class="grafico">
+        <div class="barra" data-valor="180"><span>179M€</span><div class="tooltip">179 millones €</div></div>
+        <div class="barra" data-valor="30"><span><1M€</span><div class="tooltip">Menos de 1 millón €</div></div>
+    </div>
+    <p>El gobierno destina aproximadamente 179 millones de euros a políticas feministas, mientras que la financiación para investigación específica contra el cáncer de mama es menor.</p>
+</section>
+
+<section id="reflexiones">
+    <h2>5. Reflexiones y debate sobre prioridades</h2>
+    <p>Se discute si mantener altas inversiones en políticas feministas es adecuado. La asignación de recursos debe equilibrar problemas sociales y de salud pública.</p>
+</section>
+
+<section id="errores">
+    <h2>6. Errores y críticas al feminismo actual</h2>
+    <div class="error-card"><i class="ri-user-3-fill"></i>Feminismo hegemónico o blanco</div>
+    <div class="error-card"><i class="ri-group-fill"></i>Falta de interseccionalidad real</div>
+    <div class="error-card"><i class="ri-police-car-fill"></i>Feminismo punitivista/carcelario</div>
+    <div class="error-card"><i class="ri-emotion-sad-fill"></i>Victimismo constante</div>
+    <div class="error-card"><i class="ri-shopping-bag-fill"></i>Pop‑feminismo y mercantilización</div>
+    <div class="error-card"><i class="ri-flashlight-fill"></i>Polarización interna y puritanismo</div>
+    <div class="error-card"><i class="ri-heart-broken-fill"></i>Misandria y discursos excluyentes</div>
+    <div class="error-card"><i class="ri-transgender-fill"></i>TERFismo (trans‑exclusión)</div>
+    <div class="error-card"><i class="ri-flag-fill"></i>Feminacionalismo</div>
+    <div class="error-card"><i class="ri-shield-cross-fill"></i>Backlash y polarización social</div>
+    <div class="error-card"><i class="ri-slideshow-3-fill"></i>Instrumentalización política y falta de autocrítica</div>
+</section>
+
+<section id="conclusiones">
+    <h2>7. Conclusiones</h2>
+    <p>El feminismo tiene logros históricos, pero enfrenta retos internos y debates sobre recursos públicos. Se sugiere revisión para mantener eficacia, inclusión y legitimidad.</p>
+</section>
+
+<section id="encuesta">
+    <h2>8. Tu opinión</h2>
+    <p>Después de leer este artículo, dinos tu punto de vista sobre el feminismo actual:</p>
+    <form id="form-opinion">
+        <label for="interes">¿Qué tan de acuerdo estás con los temas discutidos?</label>
+        <select id="interes" required>
+            <option value="">Selecciona</option>
+            <option value="Muy de acuerdo">Muy de acuerdo</option>
+            <option value="De acuerdo">De acuerdo</option>
+            <option value="Neutral">Neutral</option>
+            <option value="En desacuerdo">En desacuerdo</option>
+            <option value="Muy en desacuerdo">Muy en desacuerdo</option>
+        </select>
+
+        <label for="cambio">¿Cambia tu punto de vista después de leer el artículo?</label>
+        <select id="cambio" required>
+            <option value="">Selecciona</option>
+            <option value="Sí, cambió mucho">Sí, cambió mucho</option>
+            <option value="Sí, cambió un poco">Sí, cambió un poco</option>
+            <option value="No, permaneció igual">No, permaneció igual</option>
+        </select>
+
+        <label for="comentario">Comentario opcional:</label>
+        <textarea id="comentario" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+
+        <button type="submit">Ver resultado</button>
+    </form>
+    <div id="resultado" style="margin-top:20px; font-weight:bold; color:#ff3d6f;"></div>
+</section>
+
+<footer>
+<p>&copy; 2025 Aleix García Vivo</p>
+</footer>
+
+<script>
+// Animación scroll
+const secciones = document.querySelectorAll('section');
+const mostrarSeccion = () => {
+    const trigger = window.innerHeight / 1.2;
+    secciones.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < trigger) sec.classList.add('visible');
+    });
+}
+window.addEventListener('scroll', mostrarSeccion);
+window.addEventListener('load', mostrarSeccion);
+
+// Animación de barras proporcional
+const barras = document.querySelectorAll('.barra');
+barras.forEach(bar => {
+    const valor = bar.getAttribute('data-valor');
+    setTimeout(() => { bar.style.height = valor + 'px'; }, 300);
+});
+
+// Formulario local sin guardar datos
+document.getElementById('form-opinion').addEventListener('submit', function(e){
+    e.preventDefault();
+    const interes = document.getElementById('interes').value;
+    const cambio = document.getElementById('cambio').value;
+    const comentario = document.getElementById('comentario').value;
+    let mensaje = `Tu opinión: "${interes}". Tu punto de vista después de leer el artículo: "${cambio}".`;
+    if(comentario) mensaje += ` Comentario adicional: "${comentario}"`;
+    document.getElementById('resultado').innerText = mensaje;
+    document.getElementById('form-opinion').reset();
+});
+</script>
+
+</body>
+</html>
